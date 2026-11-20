@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Aufgaben-App</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#263b60">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Meine Aufgaben</h1>
+
+    <p>Willkommen bei meiner ersten App!</p>
+
+    <input type="text" id="aufgabe" placeholder="Neue Aufgabe eingeben">
+
+    <button onclick="aufgabeHinzufuegen()">
+        Aufgabe hinzufügen
+    </button>
+
+    <p id="aufgabenStatus"></p>
+    <ul id="aufgabenListe"></ul>
+
+    <script src="app.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+
+        window.addEventListener("load", function() {
+
+            navigator.serviceWorker.register("./service-worker.js")
+                .then(function() {
+                    console.log("App ist offlinefähig!");
+                })
+                .catch(function(error) {
+                    console.error("Fehler:", error);
+                });
+
+        });
+
+    }
+    </script>
+</body>
+</html>

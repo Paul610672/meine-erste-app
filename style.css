@@ -1,0 +1,108 @@
+
+/* Allgemeines Aussehen */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Überschrift */
+h1 {
+    color: #263b60;
+    margin-bottom: 25px;
+}
+
+/* Eingabefeld */
+input {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    padding: 14px;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Schaltfläche */
+button {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    background-color: #3478d4;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    margin: 12px auto 0 auto;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Aufgabenliste */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+li {
+    background-color: white;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 350px;
+    border-radius: 8px;
+}
+
+/* Erledigte Aufgaben */
+li.erledigt {
+    text-decoration: line-through;
+    color: #999999;
+    background-color: #e0e0e0;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* Aufgaben anklickbar machen */
+li {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Aufgabenstatistik */
+#aufgabenStatus {
+    color: #263b60;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+/* Jede Aufgabenzeile */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    cursor: default;
+    text-align: left;
+}
+
+/* Aufgabentext */
+.aufgabenText {
+    flex: 1;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+/* Löschen-Schaltfläche */
+.loeschenButton {
+    width: auto;
+    margin: 0;
+    padding: 8px 12px;
+    background-color: #d9534f;
+    flex-shrink: 0;
+    font-size: 14px;
+}
